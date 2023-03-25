@@ -6,3 +6,13 @@ output files path location
 Input files will be unzipped and will be put in the output folder. 
 Preprocessing function will perform the cleanup activities on the extracted files. 
 Rows with NULL in Event_type column will be removed as part of preprocess Categorical variables will be replaced with Numberial labels.
+
+
+
+--Final Fiile
+Reason for the failure while unzipping files:
+https://github.com/brianhelba/zipfile-deflate64
+Windows' in-built compression module uses Deflate64  compression method for file with size over 2GB which is not supported by conventional uncompression python libraries like Zipfile and pyzipper
+
+New library to unzip the files - zipfile_deflate64
+<https://teams.microsoft.com/l/message/19:EL_bTKENZwBNx1LMHxMHQRDClqsQELXMzHqbjDNnKi41@thread.tacv2/1679704996784?tenantId=49bba7a4-424b-4070-a70e-886e9dd7caef&amp;groupId=372f95e1-febe-4013-922b-859d8967f9f6&amp;parentMessageId=1679704996784&amp;teamName=Deighton&amp;channelName=General&amp;createdTime=1679704996784&amp;allowXTenantAccess=false>
